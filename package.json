@@ -10,6 +10,8 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@mescius/wijmo": "^5.20241.19",
+    "@mescius/wijmo.vue2.all": "^5.20241.19",
     "lodash-es": "^4.17.21",
     "vue": "^3.2.47"
   },

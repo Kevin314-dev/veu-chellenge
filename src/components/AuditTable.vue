@@ -38,9 +38,12 @@ const emailGroupsByDate = computed(() => {
         :key="subject + datetime"
       >
         <td>{{ from }}</td>
+        <!-- <td>
+              <RecipientsDisplay :recipients="recipients" />
+        </td> -->
         <td>
-          <RecipientsDisplay :recipients="recipients" />
-        </td>
+              <RecipientsDisplay :recipients="recipients" />
+       </td>
         <td>{{ subject }}</td>
         <td class="align-right">
           <DateDisplay :datetime="datetime" />
@@ -59,6 +62,7 @@ const emailGroupsByDate = computed(() => {
 }
 
 table {
+  z-index: 1;
   table-layout: fixed;
   border: var(--border-style);
   width: 100%;
@@ -78,10 +82,10 @@ th:nth-child(1) {
   width: 20%;
 }
 th:nth-child(2) {
-  width: 30%;
+  width: 50%;
 }
 th:nth-child(3) {
-  width: 50%;
+  width: 30%;
 }
 th:nth-child(4) {
   width: 90px;
@@ -95,4 +99,14 @@ tbody:nth-child(even) {
 .align-right {
   text-align: right;
 }
+.badge-div{
+display: flex;
+position: relative;
+}
+.recip{
+  width: 100%;
+  text-overflow: ellipsis;
+  margin-right: 10px;
+}
+
 </style>
